@@ -535,7 +535,7 @@ var fileQueue = new queue(1, function(err) {
 
 fs.readdir(path.join(process.cwd(),"input"),function(err, files)
 {
-    if(typeof files !== null)
+    if(typeof files !== 'undefined')
     {
         for(var i = 0; i < files.length; i++)
         {   
@@ -546,7 +546,7 @@ fs.readdir(path.join(process.cwd(),"input"),function(err, files)
             fileQueue.push(pdf_to_png.bind(null,path.join(process.cwd(),"input",files[i])));
         }
     } else {
-    console.log("Error in reading files: " + err);
+    throw new Error("Error in reading files: " + err);
 }
     fileQueue.begin();
 });
