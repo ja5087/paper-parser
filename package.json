@@ -1,0 +1,17 @@
+{
+  "name": "paper-parser",
+  "version": "1.0.0",
+  "description": "Parses IB Math PDF Papers into usable PNGs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ja5087",
+  "license": "ISC",
+  "dependencies": {
+    "child-process-promise": "^2.2.0",
+    "de-async": "github:ja5087/de-async",
+    "mkdirp": "^0.5.1",
+    "opencv": "^6.0.0"
+  }
+}
